@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #1f2937;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 35px 25px;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.25);
+}
+.header h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: rgba(255,255,255,.85);
+}
+
+.movie-count {
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 18px 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.movie-count span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.movie-count small{
+    color:white;
+    opacity:.8;
+}
+
+/* FORM */
+
+.form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.form-card h2 {
+  margin-bottom: 20px;
+}
+
+.movie-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.movie-form input,
+.movie-form select,
+.filter-section input,
+.filter-section select {
+  transition: .3s;
+  padding: 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+}
+
+.movie-form input:focus,
+.movie-form select:focus,
+.filter-section input:focus,
+.filter-section select:focus {
+  border-color: #6366f1;
+      box-shadow:0 0 0 4px rgba(99,102,241,.15);
+
+}
+
+/* BUTTONS */
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button{
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.primary-btn {
+  background: #4f46e5;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #4338ca;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+/* SEARCH */
+
+.filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filter-section input {
+  flex: 1;
+}
+
+.filter-section select {
+  width: 200px;
+}
+
+/* MOVIES */
+
+.movie-section h2 {
+  margin-bottom: 20px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.movie-card{
+    background:white;
+    padding:24px;
+    border-radius:22px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.movie-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(79,70,229,.15);
+}
+
+.movie-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.movie-card h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.genre{
+    display:inline-block;
+    background:#eef2ff;
+    color:#4338ca;
+    padding:7px 14px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+.rating {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.watched {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.not-watched {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ACTION BUTTONS */
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background: #fef3c7;
+  color: #92400e;
+  flex: 1;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+  flex: 1;
+}
+
+.edit-btn:hover {
+  background: #fde68a;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+/* EMPTY */
+
+.empty{
+    background:white;
+    padding:70px;
+    text-align:center;
+    border-radius:20px;
+    color:#6b7280;
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .movie-form {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .filter-section select {
+    width: 100%;
+  }
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+}
