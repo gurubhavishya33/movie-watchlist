@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://movie-watchlist-backend-46h8.onrender.com/api",
 });
 
 export default api;
